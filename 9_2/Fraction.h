@@ -10,6 +10,12 @@ class Fraction
 	int num;
 	int denom;
 public:
+	
+	Fraction operator++();// префиксная форма
+	Fraction operator++(int); // постфиксная форма
+	Fraction operator--();
+	Fraction operator--(int);
+
 	Fraction(int n = 1, int m = 1)
 	{
 		num = n;

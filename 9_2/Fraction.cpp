@@ -32,3 +32,26 @@ Fraction operator/(Fraction a, Fraction b)
 	}
 	return a * Fraction(b.denominator(), b.numerator());
 }
+
+Fraction Fraction::operator++()
+{
+	num += denom;
+	return *this;
+}
+Fraction Fraction::operator++(int)
+{
+	Fraction old_value(*this);
+	++* this;
+	return old_value;
+}
+Fraction Fraction::operator--()
+{
+	num -= denom;
+	return *this;
+}
+Fraction Fraction::operator--(int)
+{
+	Fraction old_value(*this);
+	--* this;
+	return old_value;
+}
